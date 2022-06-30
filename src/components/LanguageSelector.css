@@ -1,0 +1,28 @@
+button{
+ 
+  font-size: 1rem;
+  color : black; 
+  background-color: white;
+  border: 2px solid;
+  padding : 1rem 1rem 1rem 1rem;
+  margin: 1rem 1rem 1rem 1rem;
+ 
+
+  
+}
+
+.active{
+  background-color:black;
+  color: #fff;
+  border: 2px solid white;
+  box-shadow: 3px 3px 10px 6px rgba(0, 0, 0, 0.06);
+
+ 
+
+}
+
+.lang{
+
+  display: flex;
+  flex-wrap: wrap;
+}

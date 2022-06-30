@@ -1,60 +1,45 @@
-import React, { useState } from 'react'
-import Glider from 'react-glider';
+import React, { useState } from 'react';
+import {useTranslation} from 'react-i18next';
+import i18next from 'i18next';
+import './LanguageSelector.css';
 
-import 'glider-js/glider.min.css';
 
 
-/*const Pane = ({ children, style, className }) => (
-  <div className={`slide ${className}`} style={style}>
-    <h1>{children}</h1>
-  </div>
-);*/
+const lngs  = {
+  en: {nativeName: 'English'},
+  de: {nativeName: 'Deutsch'},
+  es: {nativeName: 'Espanol'},
+  fr: {nativeName: 'Francais'},
+  pl: {nativeName: 'Polski'},
+  gr: {nativeName: 'Greek'}
+
+ };
 
 function LanguageSelector() {
 
-    const [languages,setlanguages] = useState(['de','en','fr']);
-    const [chosenLang, setLang] = useState('de')
-    const gliderRef = React.useRef(null)
-  return (
-   <div style={{color:'#ffffff',
-               
+  const {t} = useTranslation(); 
+  const [isActive, setisActive] = useState('en');
+    
+    return (
+      <div className="">
+        
 
-                }}>
-   
-    {/*
-    languages.map((lang)=>{
-    <button>lang </button>})
-    } 
-  */}
+        <h3>{t('languageSelectText')}</h3>
+        <div className="lang">
+        {Object.keys(lngs).map((lng) => ( 
+          <button type="submit" key={lng} className={isActive === lng ? "active" :"" }  onClick={()=> {
+            i18next.changeLanguage(lng);
+            setisActive(lng)
+            }}>
+            {lngs[lng].nativeName}
+            </button>
+        ))}
 
-<Glider draggable={true} scrollLock={true} hasDots={true} hasArrows={true} >
-				<div>Content 1!</div>
-				<div>Content 2!</div>
-				<div style={{border:'2px solid white'}}>Content 3!</div>
-				<div>Content 4!</div>
-				<div>Content 5!</div>
-			</Glider>
+      
+      </div>
 
-   {/* <Glider 
-    ref={gliderRef}
-    hasArrows={true}
-    hasDots={false}
-    draggable
-    slidesToShow={0.5}
-    slidesToScroll={1}
-    scrollToSlide={5}
-
-    >
-      <Pane >English</Pane>
-      <Pane>Deutsch</Pane>
-      <Pane style={{border: '2px solid white'}}>Francais</Pane>
-      <Pane>Espanol</Pane>
-      <Pane>English</Pane>
-
-    </Glider>
-*/}
-    </div>  
-  )
+      </div>
+  );
 }
 
 export default LanguageSelector

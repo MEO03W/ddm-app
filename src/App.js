@@ -7,14 +7,15 @@ import './App.css';
 import {BrowserRouter ,Route,Routes, Switch} from 'react-router-dom';
 import LanguageSelector from './components/LanguageSelector';
 
-
+import i18next from 'i18next';
+import {useTranslation} from 'react-i18next';
 
 
 //Main Component and Routing 
 function App() {
   return (
       <div className="App">
-        {/*
+        
         <BrowserRouter> 
           <Routes>
             <Route path="/" element={<Welcome />} />
@@ -23,10 +24,10 @@ function App() {
             <Route path="/ColorScreen" element={<ColorScreen />} />
             <Route path="/Content" element={<Content />} />
           </Routes>
-        </BrowserRouter> */}  
-        <LanguageSelector /> 
-        {/* <SizeAndLanguage /> 
-        <Content className="icons"/>  */}
+        </BrowserRouter>   
+       {/*
+        <SizeAndLanguage />
+  <Content className="icons"/>  */}
       </div>
        
   
