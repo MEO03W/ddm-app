@@ -22,7 +22,7 @@ function App() {
             <Route path="/SizeAndLanguage" element={<SizeAndLanguage />} />
             <Route path="/QRScanner" element={<QrScanner />} />
             <Route path="/ColorScreen" element={<ColorScreen />} />
-            <Route path="/Content" element={<Content />} />
+            <Route path="/Content/:id" element={<Content />} />
           </Routes>
         </BrowserRouter>   
        {/*

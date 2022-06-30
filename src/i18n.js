@@ -16,7 +16,8 @@ i18next
                     blue:'blue',
                     green:'green',
                     red:'red',
-                    mono:'mono'
+                    mono:'mono',
+                    qrText:'Scan a QR code placed near to the art or digital media device'
                 }
             },
             de: {
@@ -28,7 +29,8 @@ i18next
                     blue:'blau',
                     green:'grün',
                     red:'rot',
-                    mono:'mono'
+                    mono:'mono',
+                    qrText:'Scan einen QR Code welcher neben dem Werk oder digitalem Gerät angebracht ist'
                 }
             },
             pl: {

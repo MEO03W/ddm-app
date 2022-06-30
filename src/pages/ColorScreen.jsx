@@ -5,14 +5,16 @@ import green from '../img/green_blind.png';
 import red from '../img/red_blind.png';
 import mono from '../img/monochromatic.png';
 import {useTranslation} from 'react-i18next';
+import {useNavigate } from 'react-router-dom';
 
 function ColorScreen() {
 
   const{t} = useTranslation();
-
+  const navigate = useNavigate(); 
   //state Hook for Color Mode 
   //needs to be stored local / session wide 
-  const{colorMode,setcolorMode} = useState('');
+  const[colorMode,setcolorMode] = useState('');
+
   return (
     <div>
       
@@ -21,7 +23,9 @@ function ColorScreen() {
       <div 
         className='article'
         style={{backgroundImage: `url(${blue})`}}
-        onClick={() => {setcolorMode('blue')}}>
+        onClick={() => { //setcolorMode('blue');
+                         navigate('/QRScanner'); 
+                        }}>
           <h1 className='header'>{t('blue')}</h1>
       </div>
       <div 
