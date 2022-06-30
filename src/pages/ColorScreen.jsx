@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useState} from 'react'
 import './ColorScreen.css'
 import blue from '../img/blue_blind.png';
 import green from '../img/green_blind.png';
@@ -10,6 +10,9 @@ function ColorScreen() {
 
   const{t} = useTranslation();
 
+  //state Hook for Color Mode 
+  //needs to be stored local / session wide 
+  const{colorMode,setcolorMode} = useState('');
   return (
     <div>
       
@@ -17,7 +20,8 @@ function ColorScreen() {
       
       <div 
         className='article'
-        style={{backgroundImage: `url(${blue})`}}>
+        style={{backgroundImage: `url(${blue})`}}
+        onClick={() => {setcolorMode('blue')}}>
           <h1 className='header'>{t('blue')}</h1>
       </div>
       <div 

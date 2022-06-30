@@ -55,7 +55,7 @@ function SizeAndLanguage() {
   }
 
   return (
-      <div>
+      <div style={{}}>
         <LanguageSelector selected={selected} setSelected={setSelected}/>
         <FontSize fontSize="14px" setGlobalFontSize={setGlobalFontSize}/>
         
