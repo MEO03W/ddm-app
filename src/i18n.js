@@ -12,8 +12,11 @@ i18next
                     welcome: 'Welcome to',
                     languageSelectText: 'Please select your Language',
                     fontSelectText: 'Please set the font size to your preference',
-                    btnContinue: 'Continue'
-                    
+                    btnContinue: 'Continue',
+                    blue:'blue',
+                    green:'green',
+                    red:'red',
+                    mono:'mono'
                 }
             },
             de: {
@@ -21,7 +24,11 @@ i18next
                     welcome: 'Willkommen in',
                     languageSelectText: 'Bitte wählen Sie Ihre Sprache',
                     fontSelectText: 'Bitte stellen sie die Schriftgröße auf ihre Bedürfnisse ein',
-                    btnContinue: 'Fortfahren'
+                    btnContinue: 'Fortfahren',
+                    blue:'blau',
+                    green:'grün',
+                    red:'rot',
+                    mono:'mono'
                 }
             },
             pl: {
@@ -29,7 +36,11 @@ i18next
                     welcome: 'Witamy w',
                     languageSelectText: "Proszę wybrać swój język",
                     fontSelectText: "Proszę ustawić rozmiar czcionki do swoich potrzeb",
-                    btnContinue: "Kontynuuj"
+                    btnContinue: "Kontynuuj",
+                    blue:'niebieski',
+                    green:'zielony',
+                    red:'czerwony',
+                    mono:'mono'
                 }
             },
             es: {
@@ -37,7 +48,11 @@ i18next
                     welcome: 'Bienvenido a la',
                     languageSelectText: 'Por favor, seleccione su idioma',
                     fontSelectText: 'Por favor, ajuste el tamaño de la fuente a sus necesidades',
-                    btnContinue: 'Continuar'
+                    btnContinue: 'Continuar',
+                    blue:'azul',
+                    green:'verde',
+                    red:'rojo',
+                    mono:'mono'
                 }
             },
             fr: {
@@ -45,7 +60,11 @@ i18next
                     welcome: 'Bienvenue à la',
                     languageSelectText : 'Veuillez choisir votre langue',
                     fontSelectText : 'Veuillez régler la taille de la police selon vos besoins',
-                    btnContinue : 'Continuer'
+                    btnContinue : 'Continuer',
+                    blue:'bleu',
+                    green:'vert',
+                    red:'rouge',
+                    mono:'mono'
                 }
             },
             gr: {
@@ -53,7 +72,11 @@ i18next
                     welcome: 'Καλώς ήρθατε στην',                    
                     languageSelectText: 'Παρακαλώ επιλέξτε τη γλώσσα σας',
                     fontSelectText: 'Παρακαλώ ρυθμίστε το μέγεθος της γραμματοσειράς ανάλογα με τις ανάγκες σας',
-                    btnContinue: 'Συνέχεια'
+                    btnContinue: 'Συνέχεια',
+                    blue:'μπλε',
+                    green:'πράσινο',
+                    red:'κόκκινο',
+                    mono:'mono'
                 }
             },
         }

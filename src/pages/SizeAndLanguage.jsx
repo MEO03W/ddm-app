@@ -62,7 +62,7 @@ function SizeAndLanguage() {
             {/*<NavLink replace to={'QRScanner'} > */}
               <Button onClick={()=>{
                 setLocalStorage(); 
-                navigate("/QRScanner")
+                navigate("/ColorScreen")
                 }}>
                 {t('btnContinue')}
               </Button>
