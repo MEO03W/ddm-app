@@ -1,7 +1,7 @@
 import React, {useEffect,useState} from 'react'
 import styled from 'styled-components';
 import {QrReader} from 'react-qr-reader';
-import {useNavigate} from 'react-router-dom';
+import {useNavigate, useParams} from 'react-router-dom';
 import { MdOutlineDirectionsRailwayFilled } from 'react-icons/md';
 import {useTranslation} from 'react-i18next';
 
@@ -34,9 +34,12 @@ color:              #ffffff;
 //remember to Start Server as https (otherwise the QrScanner doesnt Work on Mobile devices) - ($env:HTTPS = "true") -and (npm start)
 //check the location before with npm start
 function QrScanner() {
+  let params = useParams();
+
   const {t} = useTranslation();
   const [data,setData] = useState('NoResult'); //useState Hook for data 
   const navigate = useNavigate();
+  const [colorMode,setcolorMode] = useState('m')
  // const [isMounted,setisMounted] = useEffect(false);
 {/*
   useEffect(() => {
@@ -44,6 +47,11 @@ function QrScanner() {
     return () => setisMounted(false); 
 
   },[]);*/}
+
+  useEffect(() => {
+    setcolorMode(params.mode)
+     
+  },[params.mode]); //if the mode changes in runtime 
   
   useEffect(() => {
        
@@ -82,7 +90,7 @@ function QrScanner() {
         videocontainerStyle={{ witdth: "100%" }} //videoContainer
       />}
       <p style={{color:'#ffffff'}}>{data}</p>                   {/* display the data in paragraph*/}
-      <Button onClick={()=>{navigate('/Content/'+data)}}>SCAN SCAN</Button>      {/* trivial Button*/}
+      {/*<Button onClick={()=>{navigate('/Content/'+data)}}>SCAN SCAN</Button> */}      {/* trivial Button*/}
       </Wrapper>
     </div>      
   );
