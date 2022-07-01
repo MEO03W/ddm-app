@@ -20,9 +20,9 @@ function App() {
           <Routes>
             <Route path="/" element={<Welcome />} />
             <Route path="/SizeAndLanguage" element={<SizeAndLanguage />} />
-            <Route path="/QRScanner" element={<QrScanner />} />
+            <Route path="/QRScanner/:mode" element={<QrScanner />} />
             <Route path="/ColorScreen" element={<ColorScreen />} />
-            <Route path="/Content/:id" element={<Content />} />
+            <Route path="/Content/:id/:mode" element={<Content />} />
           </Routes>
         </BrowserRouter>   
        {/*

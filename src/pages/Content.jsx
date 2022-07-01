@@ -43,12 +43,13 @@ const ContentWrap = styled.div`
 
 //Content Screen with Icons for going to Qr Scanner and for open Settings 
 function Content() {
-  
+
    const [error,setError] = useState(false);
    
-  let params = useParams();
+let params = useParams();         //redundand but for knowledge :)
+ const {id, mode} = useParams(); //redundand but for knowledge :)
   const navigate = useNavigate();
-
+  
   useEffect(() => {
     console.log('hello')
     if (params.id === 'NoResult'){
@@ -62,11 +63,11 @@ function Content() {
     <div>
       <Wrapper>
         
-        <MdOutlineQrCodeScanner onClick={()=> {navigate('/QRScanner')}}/> 
-        <IoSettingsOutline />
+        <MdOutlineQrCodeScanner onClick={()=> {navigate('/QRScanner/'+mode)}}/> 
+        <IoSettingsOutline onClick={() =>{ console.log('Here should pop up the settings menu') }}/>
       </Wrapper>  
         <ContentWrap>
-        {!error && <img src={require('../img/'+params.id+'b.png')}/>}
+        {!error && <img src={require('../img/'+params.id+mode+'.png')}/>}
         </ContentWrap>
     </div> 
   )

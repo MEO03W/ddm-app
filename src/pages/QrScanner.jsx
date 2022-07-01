@@ -56,7 +56,7 @@ function QrScanner() {
   useEffect(() => {
        
      if (data !=='NoResult') {
-      navigate('/Content/'+data);
+      navigate('/Content/'+data+'/'+colorMode); //navigate to Content with params as mode and data (img number)
      }
 
   },[data]);

@@ -24,23 +24,32 @@ function ColorScreen() {
         className='article'
         style={{backgroundImage: `url(${blue})`}}
         onClick={() => { //setcolorMode('blue');
-                         navigate('/QRScanner'); 
+                         navigate('/QRScanner/b'); 
                         }}>
           <h1 className='header'>{t('blue')}</h1>
       </div>
       <div 
         className='article'
-        style={{backgroundImage: `url(${green})`}}>
+        style={{backgroundImage: `url(${green})`}}
+        onClick={() => { //setcolorMode('green');
+          navigate('/QRScanner/g'); 
+         }}>
           <h1 className='header'>{t('green')}</h1>
       </div>
       <div 
         className='article'
-        style={{backgroundImage: `url(${red})`}}>
+        style={{backgroundImage: `url(${red})`}}
+        onClick={() => { //setcolorMode('red');
+          navigate('/QRScanner/g'); 
+         }}>
           <h1 className='header'>{t('red')}</h1>
       </div>
       <div 
         className='article'
-        style={{backgroundImage: `url(${mono})`}}>
+        style={{backgroundImage: `url(${mono})`}}
+        onClick={() => { //setcolorMode('mono');
+          navigate('/QRScanner/m'); 
+         }}>
           <h1 className='header'>{t('mono')}</h1>
       </div>
       {/*}
